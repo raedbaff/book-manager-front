@@ -1,5 +1,4 @@
 import {
-  ApolloError,
   ApolloQueryResult,
   gql,
   OperationVariables,
@@ -63,7 +62,7 @@ const BookForm = ({
   // STATES
 
   // GRAPHQL FUNCTIONS
-  const [createBook, { data, loading, error }] = useMutation(CREATE_BOOK, {
+  const [createBook, { loading, error }] = useMutation(CREATE_BOOK, {
     onCompleted: () => {
       setName("");
       setDescription("");
@@ -98,7 +97,7 @@ const BookForm = ({
       }
     },
   });
-  const [editBook, { data: editData, loading: editLoading, error: editError }] =
+  const [editBook, { loading: editLoading }] =
     useMutation(EDIT_BOOK, {
       onCompleted: () => {
         toggleEditMode(false);

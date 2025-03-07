@@ -14,7 +14,7 @@ import "./App.css";
 import BookForm from "./components/bookForm";
 import { gql, useMutation, useQuery } from "@apollo/client";
 import { fetchBooksResponse } from "./types";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Toaster, toaster } from "./components/ui/toaster";
 
@@ -39,7 +39,7 @@ function App() {
     }
   `;
 
-  const { loading, error, data, refetch } = useQuery<fetchBooksResponse>(
+  const { data, refetch } = useQuery<fetchBooksResponse>(
     GET_BOOKS,
     {
       onCompleted: (data) => setBooks(data.findAllBooks),
@@ -76,7 +76,7 @@ function App() {
   const [editMode, setEditMode] = useState(false);
   const [id, setId] = useState<number | null>(null);
 
-  const [deleteTheBook, { loading: deleteLoading, error: deleteError }] =
+  const [deleteTheBook, { loading: deleteLoading }] =
     useMutation(DELETE_BOOK, {
       onCompleted: () => refetch(),
       onError: (error) => {
@@ -107,7 +107,7 @@ function App() {
       },
     });
 
-  const [deleteAllBooks, { loading: deleteAllLoading, error: deleteAllError }] =
+  const [deleteAllBooks, { loading: deleteAllLoading }] =
     useMutation(DELETE_All_BOOKS, {
       onCompleted: () => refetch(),
       onError: (error) => {
