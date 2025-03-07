@@ -21,28 +21,33 @@
 ## 📦 Installation
 
 ### 1️⃣ Clone the repository
-
-git clone <repo_url>
-cd frontend
+```bash
+git clone https://github.com/raedbaff/book-manager-front.git
+cd book-manager-front
+```
 
 ### 2️⃣ Install dependencies
-
+```bash
 npm install
+```
 
 ### 3️⃣ Set up environment variables (Create a .env file)
 
 VITE_GRAPHQL_URL=<your-backend-graphql-url>
 
 - update auth_config.json
-
+```json
 {
 "domain": "domain",
 "clientId": "clientId",
 "audience": "audience"
 }
+```
 
 ### 4️⃣ Run the project
+```bash
 - npm run dev
+```
 
 ## ⚡ Usage
 - Login using Auth0
