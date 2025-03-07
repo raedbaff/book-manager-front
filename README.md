@@ -1,54 +1,50 @@
-# React + TypeScript + Vite
+# 📚 Book Management Dashboard (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- This is the frontend for the Full Stack Engineering Test, built with React, GraphQL, and Chakra UI. It allows admins to manage books by creating, editing, and deleting them, while integrating authentication using Auth0.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔐 Authentication & Authorization using Auth0
+- 📖 CRUD Operations (Create, Read, Update, Delete) for books
+- 🏗 GraphQL API Integration
+- 🎨 Chakra UI Components for a responsive and accessible UI
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React – Frontend framework
+- GraphQL – API communication
+- Apollo Client – GraphQL state management
+- Chakra UI – UI framework
+- TypeScript – Type safety
+- Auth0 – Authentication & Authorization
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 📦 Installation
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 1️⃣ Clone the repository
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+git clone <repo_url>
+cd frontend
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### 2️⃣ Install dependencies
+
+npm install
+
+### 3️⃣ Set up environment variables (Create a .env file)
+
+VITE_GRAPHQL_URL=<your-backend-graphql-url>
+
+- update auth_config.json
+
+{
+"domain": "domain",
+"clientId": "clientId",
+"audience": "audience"
+}
+
+### 4️⃣ Run the project
+- npm run dev
+
+## ⚡ Usage
+- Login using Auth0
+- View all books in a table
+- Create, edit, and delete books
