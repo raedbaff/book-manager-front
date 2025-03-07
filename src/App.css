@@ -1,0 +1,107 @@
+.table_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5rem;
+}
+table {
+  width: 90%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  background-color: #ffffff;
+  box-shadow: 10px 5px 5px rgb(59, 109, 109);
+}
+
+thead {
+  background-color: #81E6D9; /* Light teal */
+  color: #2C7A7B; /* Darker teal for contrast */
+}
+
+th, td {
+  padding: 12px 16px;
+  border: 1px solid #e2e8f0;
+  text-align: left;
+  color: black;
+}
+
+tr:nth-child(even) {
+  background-color: #c7c5c5e3;
+}
+
+tr:hover {
+  background-color: teal; /* Subtle hover effect */
+}
+
+th {
+  font-weight: 600;
+}
+.form-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #81E6D9;
+  box-shadow: 10px 5px 5px rgb(59, 109, 109);
+  border-radius: 8px;
+  font-family: sans-serif;
+}
+
+.book-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.book-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.book-form input,
+.book-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: white;
+  color: black;
+}
+
+.book-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cancel-button,
+.create-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.cancel-button {
+  background-color: #e2e8f0;
+  color: #333;
+}
+
+.create-button {
+  background-color: #319795; /* Teal.500 */
+  color: #fff;
+  border: 1px solid #319795;
+}
+.error {
+  color: red;
+  font-weight: bold;
+}
+
